@@ -15,11 +15,15 @@ app.get("/", (req, res)=> {
 app.get("/hello", (req, res)=> {
 
 
+	console.log("hello")
 	res.send("siuuu")
 
 })
 
 app.post("/something", (req, res) => {
+
+	
+
 	res.send(req.body)
 })
 
