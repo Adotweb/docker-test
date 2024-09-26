@@ -19,4 +19,8 @@ app.get("/hello", (req, res)=> {
 
 })
 
+app.post("/something", (req, res) => {
+	res.send(req.body)
+})
+
 app.listen(PORT, () => console.log("server runs on port", PORT))
