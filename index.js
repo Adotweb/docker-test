@@ -1,12 +1,13 @@
 const express = require("express");
 
 const app = express()
-
+const body_parser = require("body-parser")
 const PORT = process.env.PORT || 3000
 
 console.log(process.env)
 
 app.use(express.json())
+app.use(body_parser())
 
 app.get("/", (req, res)=> {
 
