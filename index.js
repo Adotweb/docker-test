@@ -4,7 +4,6 @@ const app = express()
 const body_parser = require("body-parser")
 const PORT = process.env.PORT || 3000
 
-console.log(process.env)
 
 app.use(express.json())
 app.use(body_parser())
@@ -27,7 +26,7 @@ app.post("/something", (req, res) => {
 
 	console.log(req.body)	
 
-	res.send(req.body)
+	res.send("hello")
 })
 
 app.listen(PORT, () => console.log("server runs on port", PORT))
