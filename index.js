@@ -6,6 +6,8 @@ const PORT = process.env.PORT || 3000
 
 console.log(process.env)
 
+app.use(express.json())
+
 app.get("/", (req, res)=> {
 
 	res.send("hello")
@@ -22,7 +24,7 @@ app.get("/hello", (req, res)=> {
 
 app.post("/something", (req, res) => {
 
-	
+	console.log(req.body)	
 
 	res.send(req.body)
 })
